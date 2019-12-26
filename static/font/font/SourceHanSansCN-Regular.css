@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/* /static/font/font/ */
+
+@font-face {
+ font-family: "SourceHanSansCN-Regular";
+ src: url("/static/font/font/Source Han Sans CN Regular.ttf");
+ font-weight: normal;
+ font-style: normal;
+}

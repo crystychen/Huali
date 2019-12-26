@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+/* /static/font/font-bold/ */
+@font-face {
+	font-family: "SourceHanSansCN-Bold";
+	src: url('/static/font/font/SOURCEHANSANSCN-BOLD.ttf');
+	font-weight: bold;
+	font-style: normal;
+}
+

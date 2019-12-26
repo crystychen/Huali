@@ -1,0 +1,10 @@
+@font-face {
+	font-family: "SourceHanSansCN-Bold";
+	src: url("SOURCEHANSANSCN-BOLD.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+/* 压缩字体包用  文字写在font.html  指令font-spider ./font.html  */
+#container {
+  font-family: 'SourceHanSansCN-Bold';
+}
