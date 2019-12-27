@@ -128,6 +128,8 @@
 			let id = this.$route.params.id;
 			this.id = id;
 			this.getData(id);
+			
+			$webfont.load(".container", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
 		},
 		watch: {
 			// 监测
@@ -250,10 +252,10 @@
 			}
 
 			.text-top {
-				// font-weight: bold;
-				font-family: SourceHanSansCN-Bold;
+				font-weight: bold;
+				// font-family: SourceHanSansCN-Bold;
 				font-size: 2rem;
-				font-weight: normal;
+				// font-weight: normal;
 				font-stretch: normal;
 				line-height: 1.555555rem;
 				letter-spacing: 0px;
@@ -269,9 +271,9 @@
 				word-wrap: break-word;
 				width: 10rem;
 				height: 2.722222rem;
-				font-family: SourceHanSansCN-Bold;
+				// font-family: SourceHanSansCN-Bold;
 				font-size: 1.555555rem;
-				font-weight: normal;
+				font-weight: bold;
 				font-stretch: normal;
 				line-height: 1.555555rem;
 				letter-spacing: -1px;

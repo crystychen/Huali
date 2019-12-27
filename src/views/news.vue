@@ -244,6 +244,8 @@
 			this.id = id;
 			console.log("frame", id)
 			this.getData(id)
+			
+			$webfont.load(".container", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
 		},
 		created() {
 			this.activeName = this.$route.params.type || 'news'
@@ -341,10 +343,8 @@
 	.panel-content /deep/ .el-tabs--card>.el-tabs__header .el-tabs__item {
 		margin: 1.111111rem 1.111111rem;
 		border: none;
-		font-family: "SourceHanSansCN-Bold";
 		font-size: 1.333333rem;
-		font-weight: normal;
-		font-stretch: normal;
+		font-weight: bold;
 		line-height: 1.555555rpx;
 		letter-spacing: -1px;
 		color: #333333;
@@ -502,10 +502,7 @@
 				-webkit-box-orient: vertical;
 				display: -webkit-box;
 				-webkit-line-clamp: 3;
-				font-family: SourceHanSansCN-Normal;
 				font-size: 1rem;
-				font-weight: normal;
-				font-stretch: normal;
 				line-height: 1.777777rem;
 				letter-spacing: 0px;
 				color: #7a7a7a;
@@ -514,11 +511,7 @@
 		}
 
 		.media-btn {
-			// height: 17px;
-			font-family: SourceHanSansCN-Normal;
 			font-size: 1.222222rem;
-			font-weight: normal;
-			font-stretch: normal;
 			line-height: 1.777777rem;
 			letter-spacing: 0px;
 			color: #ce1d44;
@@ -558,7 +551,7 @@
 
 			.time-top {
 				font-size: 2.666666rem;
-				font-weight: normal;
+				font-weight: bold;
 				font-stretch: normal;
 				line-height: 1.777777rem;
 				letter-spacing: 2px;
@@ -568,7 +561,7 @@
 			.time-bottom {
 				height: 16px;
 				font-size: 1.222222rem;
-				font-weight: normal;
+				font-weight: bold;
 				font-stretch: normal;
 				line-height: 1.777777rem;
 				letter-spacing: 0px;
@@ -589,10 +582,7 @@
 				// font-size: 16px;
 				// color: #333333;
 				height: 1rem;
-				font-family: SourceHanSansCN-Normal;
 				font-size: 1rem;
-				font-weight: normal;
-				font-stretch: normal;
 				// line-height: 1.777777rem;
 				letter-spacing: 0px;
 				color: #333333;

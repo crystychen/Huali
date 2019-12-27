@@ -117,6 +117,8 @@
 			let id = this.$route.params.id;
 			this.id = id;
 			this.getData(id)
+			
+			$webfont.load(".container", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
 		},
 		watch: {
 			// 监测store.state
@@ -178,20 +180,17 @@
 
 		h5 {
 			height: 1.944444rem;
-			font-family: SourceHanSansCN-Bold;
+			// font-family: SourceHanSansCN-Bold;
 			font-size: 2rem;
-			font-stretch: normal;
 			line-height: 1.555555rem;
 			letter-spacing: 0px;
 			color: #333333;
 		}
 		
 		h6 {
-			font-family: SourceHanSansCN-Bold;
+			// font-family: SourceHanSansCN-Bold;
 			height: 1.166666rem;
 			font-size: 1.555555rem;
-			font-weight: normal;
-			font-stretch: normal;
 			line-height: 1.555555rem;
 			letter-spacing: -1px;
 			color: #333333;
@@ -242,11 +241,10 @@
 
 		&__text {
 			// width: 333px;
-			font-family: SourceHanSansCN-Regular;
-			font-size: 18px;
+			font-size: 1rem;
 			font-weight: normal;
 			font-stretch: normal;
-			line-height: 28px;
+			line-height: 1.555555rem;
 			letter-spacing: -1px;
 			color: #333333;
 			padding-left: 2.1875rem;
@@ -261,81 +259,5 @@
 		}
 	}
 
-	.video {
-		width: 100%;
-		height: 100%;
-		background: #CCCCCC;
-	}
 
-	.carousel-item-img {
-		background: #FAFAFA;
-		position: relative;
-		overflow: hidden;
-		margin: o auto;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: center;
-
-		.grid-content-img {
-			height: 100%;
-			width: 50%;
-			z-index: 1;
-		}
-
-		.text-container {
-			width: 100%;
-			max-width: 43.75rem;
-			height: 100%;
-			background: #4c91ef;
-			padding: 2.8125rem 6.25rem;
-			color: #fff;
-			font-size: 20px;
-			box-sizing: border-box;
-			border-top-left-radius: 4px;
-			border-bottom-left-radius: 4px;
-
-			h1 {
-				font-size: 1.222222rem;
-				font-weight: normal;
-				font-stretch: normal;
-				letter-spacing: 0px;
-				color: #ffffff;
-			}
-
-
-			.main-text {
-				// width: 445px;
-				height: 410px;
-				font-family: SourceHanSansCN-Regular;
-				font-size: 18px;
-				font-weight: normal;
-				font-stretch: normal;
-				line-height: 28px;
-				letter-spacing: 0px;
-				color: #ffffff;
-				margin-top: 1.125rem;
-			}
-
-			.operation-btn {
-				margin-top: 70px;
-				position: relative;
-				width: auto;
-				display: inline-block;
-				z-index: 1;
-				font-size: 1.375rem;
-
-				&:after {
-					content: " ";
-					position: absolute;
-					bottom: 2px;
-					left: 0;
-					z-index: -1;
-					height: 6px;
-					width: 96%;
-					background: #CD1E46;
-				}
-			}
-		}
-	}
 </style>

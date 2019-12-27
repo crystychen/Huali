@@ -172,6 +172,7 @@
 			console.log("frame", id)
 			this.getData(id)
 
+			$webfont.load(".container", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
 		},
 		watch: {
 			// 监测store.state
@@ -234,20 +235,17 @@
 
 		h5 {
 			height: 1.944444rem;
-			font-family: SourceHanSansCN-Bold;
+			// font-family: SourceHanSansCN-Bold;
 			font-size: 2rem;
-			font-stretch: normal;
 			line-height: 1.555555rem;
 			letter-spacing: 0px;
 			color: #333333;
 		}
 		
 		h6 {
-			font-family: SourceHanSansCN-Bold;
+			// font-family: SourceHanSansCN-Bold;
 			height: 1.166666rem;
 			font-size: 1.555555rem;
-			font-weight: normal;
-			font-stretch: normal;
 			line-height: 1.555555rem;
 			letter-spacing: -1px;
 			color: #333333;
@@ -258,11 +256,10 @@
 	.el-carousel__item .medium {
 		width: 192px;
 		height: 24px;
-		font-family: SourceHanSansCN-Regular;
-		font-size: 24px;
+		// font-family: SourceHanSansCN-Regular;
+		font-size: 1.333333rem;
 		font-weight: normal;
-		font-stretch: normal;
-		line-height: 32px;
+		line-height: 1.777777rem;
 		letter-spacing: 0px;
 		color: #333333;
 		position: absolute;
@@ -361,11 +358,10 @@
 		p {
 			// width: 333px;
 			height: 1.5rem;
-			font-family: SourceHanSansCN-Regular;
-			font-size: 24px;
+			// font-family: SourceHanSansCN-Regular;
+			font-size: 1.333333rem;
 			font-weight: normal;
-			font-stretch: normal;
-			line-height: 32px;
+			line-height: 1.777777rem;
 			letter-spacing: 0px;
 			color: #333333;
 			margin: 2.125rem 0;

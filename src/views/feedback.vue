@@ -139,7 +139,8 @@
 		mounted() {
 			this.$store.state.topNavActive = this.$route.path; // 活跃菜单与当前路径对应
 			this.setSize();
-
+			
+			$webfont.load(".container", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
 		},
 		watch: {
 			// 监测store.state
@@ -267,15 +268,13 @@
 	}
 
 	.btn-text {
-		width: 96px;
-
+		width: 5.333333rem;
 		font-size: 1.333333rem;
-		font-weight: normal;
-		font-stretch: normal;
-		line-height: 28px;
+		font-weight: bold;
+		line-height: 1.555555rem;
 		letter-spacing: 0px;
 		color: #ffffff;
-
+		text-shadow: 0px 0px 10px rgba($color: #ffffff, $alpha: 0.75);
 	}
 
 	.panel-title {
@@ -288,9 +287,7 @@
 			// width: 133px;
 			height: 1.833333rem;
 			font-size: 1.888888rem;
-			font-family: SourceHanSansCN-Bold;
-			font-weight: normal;
-			font-stretch: normal;
+			font-weight: bold;
 			line-height: 1.555555rem;
 			letter-spacing: 0px;
 			color: #ffffff;
@@ -300,9 +297,7 @@
 			// width: 186px;
 			height: 0.833333rem;
 			font-size: 1.111111rem;
-			font-family: SourceHanSansCN-Bold;
-			font-weight: normal;
-			font-stretch: normal;
+			font-weight: bold;
 			line-height: 1.555555rem;
 			letter-spacing: -1px;
 			color: #ffffff;

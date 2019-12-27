@@ -10,10 +10,10 @@
 				<!-- @select="handleSelect" -->
 				<!-- background-color="#4A92EF" text-color="#fff" active-text-color="#ffd04b" -->
 				<!-- :default-active="$route.path" -->
-				<el-menu :default-active="activeIndex" :active="activeIndex" class="menu el-menu-demo" mode="horizontal" @select="handleSelect"
+				<el-menu :default-active="activeIndex" :active="activeIndex" class="menu el-menu-demo" mode="horizontal" @select="handleSelect" @open="openMenu" @close="closeMenu"
 				 :router="router">
 					<template v-for="(item,index) in menu">
-						<el-submenu  :index="'/'+item.link+'/'+item.id" @click="clickMenu(item)" popper-class="custom-submenu" v-if="item.children.length">
+						<el-submenu  :index="'/'+item.link+'/'+item.id" @click="clickMenu(item)" :popper-append-to-body="true" popper-class="custom-submenu" v-if="item.children.length">
 							 <template slot="title">{{item.title}}</template>
 							 <el-menu-item v-for="child in item.children"  :index="'/'+child.link+'/'+child.id"  :key="child.id" @click="clickMenu(child)">
 								<a :href="child.link" target="_blank" v-if="child.link.indexOf('http') > -1">{{child.title}}</a>
@@ -88,6 +88,12 @@
 			}
 		},
 		methods: {
+			openMenu (key) {
+				console.log("打开二级菜单", key)
+			},
+			closeMenu (key) {
+				console.log("关闭二级菜单", key)
+			},
 			handleSelect(key, keyPath) {
 				// this.isShow = this.defaultActive != key;
 				// window.console.log(this.isShow);
@@ -138,6 +144,9 @@
 		mounted: () => {
 			console.log("menu")
 			console.log(this.menu)
+			
+			$webfont.load("#menus-wrap", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
+			$webfont.load(".custom-submenu", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
 		},
 		watch: {
 			// 监测store.state
@@ -149,7 +158,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 	#menus-wrap {
-		font-family: SourceHanSansCN-Regular;
+		// font-family: SourceHanSansCN-Regular;
 	}
 	.el-header {
 		background-color: #4a92ef;
@@ -223,17 +232,35 @@
 	.header-wrap /deep/ .el-menu {
 		background: #4C91EF;
 	}
+	.header-wrap  .el-menu {
+		background: #4C91EF;
+	}
+	
+	.el-menu {
+		background: #4C91EF;
+	}
 
 	/* 利用深度/deep/深度修改组建的样式 */
 	.header-wrap /deep/ .el-menu--horizontal>.el-submenu .el-submenu__title {
-		height: 100px;
-		line-height: 100px;
+		height: 100px !important;
+		line-height: 100px !important;
+		color: #FFFFFF;
+		background: #4a92ef;
+		border-bottom: none;
+	}
+	.el-menu--horizontal > .el-submenu .el-submenu__title {
+		height: 100px !important;
+		line-height: 100px !important;
 		color: #FFFFFF;
 		background: #4a92ef;
 		border-bottom: none;
 	}
 
 	.header-wrap /deep/ .el-submenu__title i {
+		color: #fff;
+	}
+	
+	.header-wrap  .el-submenu__title i {
 		color: #fff;
 	}
 
@@ -246,7 +273,7 @@
 	/* 鼠标悬浮时，子菜单的样式 */
 	.el-menu-item:hover {
 		outline: 0 !important;
-		// color: #ffd04b !important;
+		color: #fff !important;
 		background: #4a92ef !important;
 		text-shadow: 0px 0px 10px rgba($color: #ffffff, $alpha: 0.75);
 	}
@@ -269,10 +296,12 @@
 		vertical-align: middle;
 		// line-height: 100px;
 	}
-
+	.el-menu--horizontal > .el-submenu:hover .el-submenu__title {
+		color: #FFFFFF;
+	}
 	.el-menu--popup .el-menu-item:hover,
 	.el-menu--popup .el-menu-item:hover a {
-		// color: #ffd04b !important;
+		color: #FFFFFF !important;
 		background: transparent !important;
 		text-shadow: 0px 0px 10px rgba($color: #ffffff, $alpha: 0.75);
 	}
@@ -281,6 +310,9 @@
 		// color: #ffd04b !important;
 		text-shadow: 0px 0px 10px rgba($color: #ffffff, $alpha: 0.75);
 	}
+	.el-menu--horizontal > .el-submenu.is-active .el-submenu__title {
+		color: #FFFFFF;
+	}
 
 	/* 鼠标悬浮时，主菜单的样式 */
 	.menu /deep/ .el-submenu__title {
@@ -288,9 +320,21 @@
 		padding: 0;
 		margin-left: 2vw;
 	}
+	.menu .el-submenu__title {
+		font-size: 1rem;
+		padding: 0;
+		margin-left: 2vw;
+	}
 
 	.menu /deep/ .el-submenu__title:focus,
 	.menu /deep/ .el-submenu__title:hover {
+		outline: 0 !important;
+		// color: #ffd04b !important;
+		background: #4a92ef !important;
+		text-shadow: 0px 0px 10px rgba($color: #ffffff, $alpha: 0.75);
+	}
+	.menu .el-submenu__title:focus,
+	.menu .el-submenu__title:hover {
 		outline: 0 !important;
 		// color: #ffd04b !important;
 		background: #4a92ef !important;
@@ -316,13 +360,20 @@
 		height: 100px;
 		line-height: 100px;
 	}
+	.custom-submenu .el-menu--popup {
+		margin: 0 auto;
+		text-align: center;
+		background: transparent;
+		height: 100px;
+		line-height: 100px;
+	}
 
 	.custom-submenu {
 		left: 0;
 		width: 100%;
 		background: rgba($color: #000000, $alpha: 0.5);
 		height: 100px;
-		font-family: SourceHanSansCN-Regular;
+		// font-family: SourceHanSansCN-Regular;
 		
 	}
 

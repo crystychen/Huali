@@ -1,6 +1,6 @@
 <!-- 科研 -->
 <template>
-	<div class="container">
+	<div class="container frame-container">
 		<el-carousel :height="bannerHeight + 'px'" :autoplay="false" arrow="never" indicator-position="none">
 			<el-carousel-item v-for="(item, index) in banner" :key="index">
 				<img class="img-responsive" :src="item.url">
@@ -149,6 +149,8 @@
 			this.getData(id)
 
 			// this.getBannerImgs()
+			
+			$webfont.load("#frame-container", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
 
 		},
 		watch: {
@@ -237,20 +239,19 @@
 
 		h5 {
 			height: 1.944444rem;
-			font-family: SourceHanSansCN-Bold;
+			// font-family: SourceHanSansCN-Bold;
 			font-size: 2rem;
-			font-stretch: normal;
 			line-height: 1.555555rem;
 			letter-spacing: 0px;
 			color: #333333;
 		}
 		
 		h6 {
-			font-family: SourceHanSansCN-Bold;
+			// font-family: SourceHanSansCN-Bold;
 			height: 1.166666rem;
 			font-size: 1.555555rem;
-			font-weight: normal;
-			font-stretch: normal;
+			// font-weight: normal;
+			// font-stretch: normal;
 			line-height: 1.555555rem;
 			letter-spacing: -1px;
 			color: #333333;

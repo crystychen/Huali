@@ -269,6 +269,8 @@
 			this.getData(id);
 			
 			this.getBannerData(); // 顶部banner
+			
+			$webfont.load(".container", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
 
 		},
 		created() {
@@ -335,8 +337,8 @@
 	.panel-content /deep/ .el-tabs--card>.el-tabs__header .el-tabs__item {
 		margin: 1.111111rem 1.111111rem;
 		border: none;
-		font-weight: normal;
-		font-family: "SourceHanSansCN-Bold";
+		font-weight: bold;
+		// font-family: "SourceHanSansCN-Bold";
 		font-size: 1.555555rem;
 		width: 23.75rem;
 		height: 6.25rem;
@@ -351,7 +353,7 @@
 	}
 
 	.panel-content /deep/ .el-tabs--card>.el-tabs__header .el-tabs__item.is-active {
-		font-family: "SourceHanSansCN-Bold";
+		// font-family: "SourceHanSansCN-Bold";
 		background: #4B94EE;
 		color: #FFFFFF;
 		border-radius: 6px;

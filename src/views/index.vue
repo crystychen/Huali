@@ -1,5 +1,5 @@
 <template>
-	<div class="container">
+	<div class="container" id="index-container">
 		<carousel :banner="banner" :bannerHeight="bannerHeight"></carousel>
 		<!-- 三列 -->
 		<el-row type="flex" class="gray-bcg" justify="center">
@@ -25,8 +25,10 @@
 						<!-- contentData[3].clogo -->
 						<img class="grid-content-img" src="../../static/imgs/index_about.png" alt="">
 						<div class="text-container">
-							<h1>{{contentData[3].title}}</h1>
-							<h3>ABOUT HUALI</h3>
+							<div class="panel-title-wrap">
+								<h1>{{contentData[3].title}}</h1>
+								<h3>ABOUT HUALI</h3>
+							</div>
 							<p class="main-text elellipse" v-html="contentData[3].content">
 							</p>
 							<P class="">
@@ -71,7 +73,7 @@
 								<el-row type="flex" justify="center">
 									<!-- wrap -->
 									<el-col class="panel-wrap " style="width: 63.333333rem;">
-										<div class="panel-title">
+										<div class="panel-title panel-title-wrap">
 											<h5>
 												产品中心
 											</h5>
@@ -480,10 +482,15 @@
 				this.screenWidth = window.innerWidth;
 				this.setSize();
 			}
+			// $webfont.load("#index-container", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
+			
 			this.getBannerData();
 			this.getPartners();
 			this.getContentData(); // 获取首页内容
 			this.getProductsData(2);
+			
+			// $webfont.load("body", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
+			$webfont.load("#index-container", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
 		},
 		watch: {
 			// 监测store.state
@@ -506,7 +513,8 @@
 
 	.container {
 		width: 100%;
-		font-family: SourceHanSansCN-Regular;
+		// font-family: SourceHanSansCN-Regular;
+		// font-family: "SiYuanRegular";
 	}
 
 	/* 图片自适应容器 */
@@ -635,8 +643,8 @@
 				// font-size: 36px;
 				font-size: 2rem;
 				height: 1.944444rem;
-				font-family: SourceHanSansCN-Bold;
-				font-weight: normal;
+				// font-family: SourceHanSansCN-Bold;
+				// font-weight: bold;
 				font-stretch: normal;
 				line-height: 1.555555rem;
 				letter-spacing: 0px;
@@ -645,9 +653,9 @@
 
 			h3 {
 				height: 1.166666rem;
-				font-family: SourceHanSansCN-Bold;
+				// font-family: SourceHanSansCN-Bold;
 				font-size: 1.555555rem;
-				font-weight: normal;
+				// font-weight: normal;
 				font-stretch: normal;
 				line-height: 1.555555rem;
 				letter-spacing: -1px;
@@ -1079,7 +1087,7 @@
 		h5,
 		h6 {
 			line-height: 1.4;
-			font-family: SourceHanSansCN-Bold;
+			// font-family: SourceHanSansCN-Bold;
 		}
 
 		.subtitle {

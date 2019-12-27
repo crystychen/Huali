@@ -53,6 +53,9 @@
 
 			}
 		},
+		mounted: () => {
+			$webfont.load(".footer", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
+		},
 		methods: {
 			clickMenu(e) {
 				let type = e.type; // type: 0(栏目)， 4(图片)，3(产品)
@@ -66,7 +69,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 	.footer {
-		font-family: SourceHanSansCN-Regular;
+		/* font-family: SourceHanSansCN-Regular; */
 	}
 	.wrap {
 		max-width: 60rem;

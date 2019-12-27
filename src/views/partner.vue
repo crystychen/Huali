@@ -130,6 +130,7 @@
 			this.getData(id)
 			this.getPartners()
 
+			$webfont.load(".container", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
 		},
 		watch: {
 			// 监测store.state
