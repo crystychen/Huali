@@ -317,6 +317,11 @@
 		padding: 0;
 		background: #FFFFFF;
 	}
+	
+	#app .el-main {
+		padding: 0;
+		background: #FFFFFF;
+	}
 
 	.el-footer {
 		width: 100%;

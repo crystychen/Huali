@@ -149,9 +149,6 @@
 			this.getData(id)
 
 			// this.getBannerImgs()
-			
-			$webfont.load("#frame-container", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
-
 		},
 		watch: {
 			// 监测
@@ -239,7 +236,7 @@
 
 		h5 {
 			height: 1.944444rem;
-			// font-family: SourceHanSansCN-Bold;
+			font-family: SourceHanSansCN-Bold;
 			font-size: 2rem;
 			line-height: 1.555555rem;
 			letter-spacing: 0px;
@@ -247,7 +244,7 @@
 		}
 		
 		h6 {
-			// font-family: SourceHanSansCN-Bold;
+			font-family: SourceHanSansCN-Bold;
 			height: 1.166666rem;
 			font-size: 1.555555rem;
 			// font-weight: normal;

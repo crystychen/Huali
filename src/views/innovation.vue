@@ -89,8 +89,7 @@
 		mounted() {
 			this.$store.state.topNavActive = this.$route.path; // 活跃菜单与当前路径对应
 			this.setSize();
-			
-			$webfont.load(".container", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
+
 		},
 		watch: {
 			// 监测store.state

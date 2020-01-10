@@ -25,7 +25,7 @@
 						<!-- contentData[3].clogo -->
 						<img class="grid-content-img" src="../../static/imgs/index_about.png" alt="">
 						<div class="text-container">
-							<div class="panel-title-wrap">
+							<div class="panel-title">
 								<h1>{{contentData[3].title}}</h1>
 								<h3>ABOUT HUALI</h3>
 							</div>
@@ -482,21 +482,17 @@
 				this.screenWidth = window.innerWidth;
 				this.setSize();
 			}
-			// $webfont.load("#index-container", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
-			
+
 			this.getBannerData();
 			this.getPartners();
 			this.getContentData(); // 获取首页内容
 			this.getProductsData(2);
-			
-			// $webfont.load("body", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
-			$webfont.load("#index-container", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
+
 		},
 		watch: {
 			// 监测store.state
 			'$store.state.devicewidth': 'setSize',
 			'$store.state.activeMenuId': 'getContentData',
-
 		}
 	}
 </script>
@@ -628,22 +624,19 @@
 		.text-container {
 			// width: 50%;
 			width: 30.555555rem;
-			// position: absolute;
-			// height: 100%;
 			height: 29.444444rem;
-			// right: 0;
-			// top: 0;
 			background: #4c91ef;
 			padding: 4rem;
 			color: #fff;
 			font-size: 1.111111rem;
 			box-sizing: border-box;
+			font-family: SourceHanSansCN-Regular;
 
 			h1 {
 				// font-size: 36px;
 				font-size: 2rem;
 				height: 1.944444rem;
-				// font-family: SourceHanSansCN-Bold;
+				font-family: SourceHanSansCN-Bold;
 				// font-weight: bold;
 				font-stretch: normal;
 				line-height: 1.555555rem;
@@ -653,7 +646,7 @@
 
 			h3 {
 				height: 1.166666rem;
-				// font-family: SourceHanSansCN-Bold;
+				font-family: SourceHanSansCN-Bold;
 				font-size: 1.555555rem;
 				// font-weight: normal;
 				font-stretch: normal;
@@ -750,6 +743,7 @@
 		align-items: center;
 		// justify-content: flex-start;
 		margin: 4rem auto;
+		font-family: SourceHanSansCN-Regular;
 
 		.grid-item-wrap:nth-child(4N) {
 			padding-right: 0;
@@ -779,6 +773,7 @@
 
 			h4 {
 				font-size: 1.333333rem;
+				font-family: SourceHanSansCN-Bold;
 			}
 
 			h5 {
@@ -906,6 +901,7 @@
 				width: auto;
 				display: inline-block;
 				z-index: 1;
+				font-family: SourceHanSansCN-Regular;
 
 				&:after {
 					content: "";
@@ -957,6 +953,8 @@
 	.product-indicator {
 		background: #FAFAFA;
 		padding: 3.125rem 0 5rem 0;
+		// font-family: SourceHanSansCN-Regular;
+		font-family: SourceHanSansCN-Bold;
 
 		.indicator-item {
 			box-sizing: border-box;
@@ -1048,7 +1046,7 @@
 				}
 
 				.img {
-					margin-left:3.888888rem;
+					margin-left: 3.888888rem;
 					width: 7.777777rem;
 					height: 10rem
 				}
@@ -1087,7 +1085,8 @@
 		h5,
 		h6 {
 			line-height: 1.4;
-			// font-family: SourceHanSansCN-Bold;
+			// font-family: SourceHanSansCN-Regular;
+			font-family: SourceHanSansCN-Bold;
 		}
 
 		.subtitle {

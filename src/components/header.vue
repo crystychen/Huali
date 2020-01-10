@@ -10,10 +10,11 @@
 				<!-- @select="handleSelect" -->
 				<!-- background-color="#4A92EF" text-color="#fff" active-text-color="#ffd04b" -->
 				<!-- :default-active="$route.path" -->
-				<el-menu :default-active="activeIndex" :active="activeIndex" class="menu el-menu-demo" mode="horizontal" @select="handleSelect" @open="openMenu" @close="closeMenu"
-				 :router="router">
+				<el-menu :default-active="activeIndex" :active="activeIndex" class="menu el-menu-demo" mode="horizontal" @select="handleSelect"
+				 @open="openMenu" @close="closeMenu" :router="router">
 					<template v-for="(item,index) in menu">
-						<el-submenu  :index="'/'+item.link+'/'+item.id" @click="clickMenu(item)" :popper-append-to-body="true" popper-class="custom-submenu" v-if="item.children.length">
+						<el-submenu  :index="'/'+item.link+'/'+item.id" @click="clickMenu(item)" :popper-append-to-body="true"
+						 popper-class="custom-submenu" v-if="item.children.length">
 							 <template slot="title">{{item.title}}</template>
 							 <el-menu-item v-for="child in item.children"  :index="'/'+child.link+'/'+child.id"  :key="child.id" @click="clickMenu(child)">
 								<a :href="child.link" target="_blank" v-if="child.link.indexOf('http') > -1">{{child.title}}</a>
@@ -88,10 +89,10 @@
 			}
 		},
 		methods: {
-			openMenu (key) {
+			openMenu(key) {
 				console.log("打开二级菜单", key)
 			},
-			closeMenu (key) {
+			closeMenu(key) {
 				console.log("关闭二级菜单", key)
 			},
 			handleSelect(key, keyPath) {
@@ -144,9 +145,7 @@
 		mounted: () => {
 			console.log("menu")
 			console.log(this.menu)
-			
-			$webfont.load("#menus-wrap", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
-			$webfont.load(".custom-submenu", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
+
 		},
 		watch: {
 			// 监测store.state
@@ -158,8 +157,9 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 	#menus-wrap {
-		// font-family: SourceHanSansCN-Regular;
+		font-family: SourceHanSansCN-Regular;
 	}
+
 	.el-header {
 		background-color: #4a92ef;
 		color: #fff;
@@ -222,20 +222,17 @@
 		border-bottom: none !important;
 		// text-shadow: 0px 0px 10px rgba($color: #ffffff, $alpha: 0.75);
 	}
-	
-	.el-menu.el-menu--horizontal
 
-	.icon {
+	.el-menu.el-menu--horizontal .icon {
 		margin-left: 2vw;
 	}
 
 	.header-wrap /deep/ .el-menu {
 		background: #4C91EF;
 	}
-	.header-wrap  .el-menu {
+	.header-wrap .el-menu {
 		background: #4C91EF;
 	}
-	
 	.el-menu {
 		background: #4C91EF;
 	}
@@ -248,7 +245,8 @@
 		background: #4a92ef;
 		border-bottom: none;
 	}
-	.el-menu--horizontal > .el-submenu .el-submenu__title {
+
+	.header-wrap .el-menu--horizontal>.el-submenu .el-submenu__title {
 		height: 100px !important;
 		line-height: 100px !important;
 		color: #FFFFFF;
@@ -259,8 +257,8 @@
 	.header-wrap /deep/ .el-submenu__title i {
 		color: #fff;
 	}
-	
-	.header-wrap  .el-submenu__title i {
+
+	.header-wrap .el-submenu__title i {
 		color: #fff;
 	}
 
@@ -280,7 +278,6 @@
 
 	// 二级菜单
 	.el-submenu.is-active .el-submenu__title {
-		// color: #ffd04b !important;
 		text-shadow: 0px 0px 10px rgba($color: #ffffff, $alpha: 0.75);
 	}
 
@@ -294,11 +291,12 @@
 		background: transparent !important;
 		height: 100px;
 		vertical-align: middle;
-		// line-height: 100px;
 	}
-	.el-menu--horizontal > .el-submenu:hover .el-submenu__title {
+
+	.el-menu--horizontal>.el-submenu:hover .el-submenu__title {
 		color: #FFFFFF;
 	}
+
 	.el-menu--popup .el-menu-item:hover,
 	.el-menu--popup .el-menu-item:hover a {
 		color: #FFFFFF !important;
@@ -310,7 +308,8 @@
 		// color: #ffd04b !important;
 		text-shadow: 0px 0px 10px rgba($color: #ffffff, $alpha: 0.75);
 	}
-	.el-menu--horizontal > .el-submenu.is-active .el-submenu__title {
+
+	.el-menu--horizontal>.el-submenu.is-active .el-submenu__title {
 		color: #FFFFFF;
 	}
 
@@ -320,6 +319,7 @@
 		padding: 0;
 		margin-left: 2vw;
 	}
+
 	.menu .el-submenu__title {
 		font-size: 1rem;
 		padding: 0;
@@ -333,6 +333,7 @@
 		background: #4a92ef !important;
 		text-shadow: 0px 0px 10px rgba($color: #ffffff, $alpha: 0.75);
 	}
+
 	.menu .el-submenu__title:focus,
 	.menu .el-submenu__title:hover {
 		outline: 0 !important;
@@ -344,6 +345,7 @@
 	.el-menu--horizontal {
 		width: 100%;
 	}
+
 	.el-menu.el-menu--horizontal {
 		border-bottom: none;
 	}
@@ -360,6 +362,7 @@
 		height: 100px;
 		line-height: 100px;
 	}
+
 	.custom-submenu .el-menu--popup {
 		margin: 0 auto;
 		text-align: center;
@@ -373,8 +376,7 @@
 		width: 100%;
 		background: rgba($color: #000000, $alpha: 0.5);
 		height: 100px;
-		// font-family: SourceHanSansCN-Regular;
-		
+		font-family: SourceHanSansCN-Regular;
 	}
 
 	.el-menu--popup.el-menu .el-menu-item {
@@ -411,6 +413,10 @@
 
 	@media (max-width: 1200px) {
 		.menu /deep/ .el-submenu__title {
+			margin-left: 1vw;
+		}
+		
+		.menu .el-submenu__title {
 			margin-left: 1vw;
 		}
 

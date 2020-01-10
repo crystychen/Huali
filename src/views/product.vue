@@ -270,8 +270,6 @@
 			
 			this.getBannerData(); // 顶部banner
 			
-			$webfont.load(".container", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
-
 		},
 		created() {
 			console.log(this.$route.params);
@@ -459,7 +457,7 @@
 		.describe-title {
 			font-size: 2.25rem;
 			font-weight: bold;
-
+			// font-family: "SourceHanSansCN-Bold";
 		}
 
 		.describe-content {

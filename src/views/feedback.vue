@@ -140,7 +140,6 @@
 			this.$store.state.topNavActive = this.$route.path; // 活跃菜单与当前路径对应
 			this.setSize();
 			
-			$webfont.load(".container", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
 		},
 		watch: {
 			// 监测store.state
@@ -288,9 +287,10 @@
 			height: 1.833333rem;
 			font-size: 1.888888rem;
 			font-weight: bold;
-			line-height: 1.555555rem;
+			line-height: 1;
 			letter-spacing: 0px;
 			color: #ffffff;
+			font-family: SourceHanSansCN-Bold;
 		}
 
 		.subtitle {
@@ -298,10 +298,11 @@
 			height: 0.833333rem;
 			font-size: 1.111111rem;
 			font-weight: bold;
-			line-height: 1.555555rem;
+			line-height: 1;
 			letter-spacing: -1px;
 			color: #ffffff;
-			margin-top: 0.555555rem;
+			margin-top: 0.666666rem;
+			font-family: SourceHanSansCN-Bold;
 		}
 	}
 

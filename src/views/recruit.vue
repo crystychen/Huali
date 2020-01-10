@@ -164,8 +164,6 @@
 			let id = this.$route.params.id;
 			this.id = id;
 			this.getData(id)
-
-			$webfont.load(".container", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
 		},
 		watch: {
 			// 监测store.state
@@ -220,18 +218,18 @@
 
 		h5 {
 			height: 1.944444rem;
-			// font-family: SourceHanSansCN-Bold;
+			font-family: SourceHanSansCN-Bold;
 			font-size: 2rem;
-			line-height: 1.555555rem;
+			line-height: 1;
 			letter-spacing: 0px;
 			color: #333333;
 		}
 		
 		h6 {
-			// font-family: SourceHanSansCN-Bold;
+			font-family: SourceHanSansCN-Bold;
 			height: 1.166666rem;
 			font-size: 1.555555rem;
-			line-height: 1.555555rem;
+			line-height: 1;
 			letter-spacing: -1px;
 			color: #333333;
 			margin-top: 0.666666rem;

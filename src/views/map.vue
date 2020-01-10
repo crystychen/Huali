@@ -131,7 +131,6 @@
 			this.id = id;
 			this.getData(id);
 
-			$webfont.load(".container", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
 			// this.initMap();
 
 		},

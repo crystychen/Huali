@@ -150,8 +150,6 @@
 			this.id = id;
 			console.log("frame", id)
 			this.getData(id)
-			
-			$webfont.load(".container", "ac637fb5c0d94ae1aae2a2869480adf7", "SiYuanRegular");
 		},
 		watch: {
 			// 监测store.state
@@ -204,18 +202,20 @@
 		h5 {
 			height: 1.944444rem;
 			font-size: 2rem;
-			line-height: 1.555555rem;
+			line-height: 1;
 			letter-spacing: 0px;
 			color: #333333;
+			font-family: SourceHanSansCN-Bold;
 		}
 		
 		h6 {
 			height: 1.166666rem;
 			font-size: 1.555555rem;
-			line-height: 1.555555rem;
+			line-height: 1;
 			letter-spacing: -1px;
 			color: #333333;
 			margin-top: 0.666666rem;
+			font-family: SourceHanSansCN-Bold;
 		}
 	}
 
